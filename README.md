@@ -87,8 +87,21 @@ npm install
 npm run dev   # or npm start
 ```
 ## 📸 Screenshots
-![Alt text](https://github.com/vik802207/credit-loan-system/blob/master/img/Screenshot%20(334).png?raw=true)
-
+---
+![Alt text](https://github.com/vik802207/qest-assignment/blob/main/img/Screenshot%20(606).png.png?raw=true)
+![Alt text](https://github.com/vik802207/qest-assignment/blob/main/img/Screenshot%20(607).png.png?raw=true)
+![Alt text](https://github.com/vik802207/qest-assignment/blob/main/img/Screenshot%20(608).png.png?raw=true)
+![Alt text](https://github.com/vik802207/qest-assignment/blob/main/img/Screenshot%20(609).png.png?raw=true)
+![Alt text](https://github.com/vik802207/qest-assignment/blob/main/img/Screenshot%20(610).png.png?raw=true)
+![Alt text](https://github.com/vik802207/qest-assignment/blob/main/img/Screenshot%20(611).png.png?raw=true)
+![Alt text](https://github.com/vik802207/qest-assignment/blob/main/img/Screenshot%20(612).png.png?raw=true)
+![Alt text](https://github.com/vik802207/qest-assignment/blob/main/img/Screenshot%20(613).png.png?raw=true)
+![Alt text](https://github.com/vik802207/qest-assignment/blob/main/img/Screenshot%20(614).png.png?raw=true)
+![Alt text](https://github.com/vik802207/qest-assignment/blob/main/img/Screenshot%20(615).png.png?raw=true)
+![Alt text](https://github.com/vik802207/qest-assignment/blob/main/img/Screenshot%20(616).png.png?raw=true)
+![Alt text](https://github.com/vik802207/qest-assignment/blob/main/img/Screenshot%20(617).png.png?raw=true)
+![Alt text](https://github.com/vik802207/qest-assignment/blob/main/img/Screenshot%20(618).png.png?raw=true)
+![Alt text](https://github.com/vik802207/qest-assignment/blob/main/img/Screenshot%20(619).png.png?raw=true)
 
 ---
 
