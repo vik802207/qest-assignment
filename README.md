@@ -1,70 +1,148 @@
-# Getting Started with Create React App
+# 🧠 Multi-Agent Query System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+An AI-powered assistant system leveraging two specialized [CrewAI](https://docs.crewai.com) agents — **Support Agent** and **Dashboard Agent** — designed to handle natural language queries, interact with MongoDB, and power intelligent dashboards for business analytics and operations.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🚀 Features
 
-### `npm start`
+- 🤖 **Multi-Agent Architecture** using CrewAI
+- 💬 **Natural Language Query Processing**
+- 📊 **Dashboard Agent**: Provides insights & metrics from MongoDB (e.g., revenue, clients, attendance)
+- 🛠 **Support Agent**: Handles support-related queries and triggers external API actions
+- 🔗 **External API Integration**: Enables real-time actions like booking, class creation, etc.
+- 📈 **Visual Analytics Dashboards**
+- 🌐 Fully integrated **React + TailwindCSS frontend**
+- ⚡ Built with **FastAPI** and connected to **MongoDB**
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## ⚙️ Tech Stack
 
-### `npm test`
+| Layer       | Technology            |
+|-------------|------------------------|
+| Frontend    | React, TailwindCSS     |
+| Backend     | FastAPI (Python)       |
+| Agents      | CrewAI (LLM-powered)   |
+| Database    | MongoDB                |
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 🧩 Agents Overview
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 📬 Support Agent
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Responds to general support queries
+- Can initiate external API calls (e.g., booking a class, adding clients)
+- Uses natural language understanding to guide actions
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 📊 Dashboard Agent
 
-### `npm run eject`
+- Performs real-time data aggregation on MongoDB
+- Generates insights such as:
+  - Revenue Metrics
+  - Active/Inactive Client Ratio
+  - Birthday Reminders
+  - New Clients This Month
+- Responds with concise summaries or JSON for visualization
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 🛠 Project Structure
+```bash
+backend/
+│
+├── api/
+│   ├── main.py               # FastAPI entry point
+│   └── routes.py             # API routes for /query and /add
+│
+├── agents/
+│   ├── support_agent.py      # Handles support queries (classes, orders, clients)
+│   └── dashboard_agent.py    # Handles metrics/analytics
+│
+├── tools/
+│   ├── mongodb_tool.py       # MongoDB tool for CrewAI
+│   └── external_api.py       # Tool to simulate order/client creation
+│
+└── utils/
+    └── schema.py             # Sample MongoDB mock data
+```
+## 🚀 Getting Started
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Follow these steps to set up and run the Multi-Agent Query System locally.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+### 1. 📥 Clone the Repository
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+git clone https://github.com/your-username/multi-agent-query-system.git
+cd qest-assignment
+cd backend
+pip install -r requirements.txt
+pip install fastapi uvicorn pymongo pydantic crewai
+uvicorn api.main:app --reload
+cd frontend
+npm install
+npm run dev   # or npm start
+```
+## 📸 Screenshots
+![Alt text](https://github.com/vik802207/credit-loan-system/blob/master/img/Screenshot%20(334).png?raw=true)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 🧠 Agents
 
-### Analyzing the Bundle Size
+### 🤖 Support Agent
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+The **Support Agent** handles operational and customer service tasks using natural language inputs. It can **read from** and **write to MongoDB**, and also **trigger external API actions**.
 
-### Making a Progressive Web App
+#### 💡 Example Queries:
+- `"What classes are available this week?"`
+- `"Show payment for order #12345"`
+- `"Create an order for Yoga Beginner for client Priya Sharma"`
+- `"Add a new client named Priya Sharma with phone 9991234567"`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+#### 🛠 Capabilities:
+- Look up available classes
+- Fetch order or payment info
+- Add new clients or orders
+- Interface with external APIs (e.g., booking, enrollment)
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### 📊 Dashboard Agent
 
-### Deployment
+The **Dashboard Agent** is focused on generating **business insights and analytics** from MongoDB. It performs advanced **aggregation queries** and returns insights in both raw and visual format.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+#### 📈 Example Queries:
+- `"How much revenue did we generate this month?"`
+- `"Which course has the highest enrollment?"`
+- `"Attendance percentage for Pilates?"`
+- `"Active vs inactive clients count?"`
+- `"New clients this month?"`
 
-### `npm run build` fails to minify
+#### 📊 Capabilities:
+- Revenue and payment analytics
+- Enrollment and attendance stats
+- Client activity monitoring
+- Aggregated data summaries for dashboards
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+
+## 🤝 Contributing
+Pull requests are welcome. For major changes, open an issue first to discuss what you would like to change.
+
+## 📜 License
+This project is licensed under the MIT License.
+## 🔗 Live Demo
+## [![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen?style=for-the-badge)](https://qest-assignment-henna.vercel.app/)
+
+## 👨‍💻 Author
+Developed by Vikash Gupta
+📧 Contact: vikashg802207@gmail.com
+
+
+
+
