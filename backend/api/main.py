@@ -25,7 +25,9 @@ db = client[os.getenv("MONGO_DB")]
 
 # Timezone
 india_tz = pytz.timezone("Asia/Kolkata")
-
+@app.get("/")
+def root():
+    return {"message": "Backend is running"}
 
 @app.post("/query/dashboard")
 async def query_dashboard(request: Request):
