@@ -3,7 +3,7 @@ import axios from "axios";
 
 export default function AddModal({ type, onClose }) {
   const [formData, setFormData] = useState({});
-  const apiUrl = `http://127.0.0.1:8000/add/${type}`;
+  const apiUrl = `https://qest-assignment.onrender.com/add/${type}`;
 
   const handleSubmit = async (e) => {
     e.preventDefault();
