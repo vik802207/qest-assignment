@@ -12,7 +12,7 @@ export default function SupportQueryForm() {
     setResponse(null);
 
     try {
-      const res = await axios.post("http://127.0.0.1:8000/query/support", { query });
+      const res = await axios.post("https://qest-assignment.onrender.com/query/support", { query });
 
       let parsed;
       try {
